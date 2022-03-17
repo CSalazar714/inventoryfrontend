@@ -9,7 +9,6 @@ export const REMOVE_ITEM = "REMOVE_ITEM"
 
 export const fetchitem = () => (dispatch) => {
   dispatch({type: FETCH_ITEM_START})
-
   axios
   .get("")
   .then(data => {
@@ -33,18 +32,18 @@ export const addItem = (item) => (dispatch) =>{
   export const removeItem = (id, item) => (dispatch) => {
     dispatch({type: FETCH_ITEM_START})
       axios
-      .delete(`${id}`)
-      .then(data => dispatch({type: REMOVE_TODO, payload: todo}))
-      .catch(err => dispatch({type: FETCH_TODO_FAIL, payload: err.message}))
+      .delete(`Link/${id}`)
+      .then(data => dispatch({type: REMOVE_ITEM, payload: item}))
+      .catch(err => dispatch({type: FETCH_ITEM_FAIL, payload: err.message}))
   
     }
 
-    export const updateTodo = (id, update) => (dispatch) =>{
-      dispatch({type: FETCH_TODO_START})
+    export const updateItem = (id, update) => (dispatch) =>{
+      dispatch({type: FETCH_ITEM_START})
       axios
-      .put(`https://todo-fullstack-carlos.herokuapp.com/todo/${id}`, update)
-      .then(data => dispatch({type: UPDATE_TODO, payload: data.data.todo_item}))
-      .catch(err => dispatch({type: FETCH_TODO_FAIL, payload: err.message})
+      .put(`/${id}`, update)
+      .then(data => dispatch({type: UPDATE_ITEM, payload: data.data.item}))
+      .catch(err => dispatch({type: FETCH_ITEM_FAIL, payload: err.message})
       )
     } 
-    // update todo
+  
