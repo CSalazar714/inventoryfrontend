@@ -33,14 +33,19 @@ import { addItem } from '../actions/Actions'
         <form onSubmit={handleSubmit}>
             <label for="title">Item Name: </label>
             <input type="text" name="title" onChange={handleChange}/>
+            <br/>
             <label for="category">Category: </label>
             <input type="text" name="category" onChange={handleChange}/>
+            <br/>
             <label for="description">Description: </label>
             <input type="text" name="description" onChange={handleChange}/>
+            <br/>
             <label for="location">Location Stored:</label>
             <input type="text" name="location" onChange={handleChange}/>
+            <br/>
             <label for="dateListed">Date Listed:</label>
             <input type="date" name="dateListed" onChange={handleChange}/>
+            <br/>
             <button>Submit</button>
         </form>
         </div>

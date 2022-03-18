@@ -1,5 +1,5 @@
 import data from '../Data'
-import { FETCH_ITEM_START, FETCH_ITEM_SUCCESS, FETCH_ITEM_FAIL, ADD_ITEM, UPDATE_ITEM, REMOVE_ITEM } from '../actions/actions'
+import { FETCH_ITEM_START, FETCH_ITEM_SUCCESS, FETCH_ITEM_FAIL, ADD_ITEM, UPDATE_ITEM, REMOVE_ITEM } from '../actions/Actions'
 
 const initialState = {
     ItemData: data,

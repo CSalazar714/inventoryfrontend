@@ -4,7 +4,7 @@ const ItemData = [
     Catergory_Id: "Electronics",
     Description: "Used Dvd Player",
     Location: "Garage",
-    Date_Listed: 03/14/2022,
+    Date_Listed: 3/14/2022,
     Quantity: 2,
     Sold: false
  },
@@ -13,7 +13,7 @@ const ItemData = [
     Catergory_Id: "Electronics",
     Description: "24in monitor",
     Location: "Garage",
-    Date_Listed: 03/14/2022,
+    Date_Listed: 3/14/2022,
     Quantity: 1,
     Sold: false
  },
@@ -22,7 +22,7 @@ const ItemData = [
     Catergory_Id: "Clothes",
     Description: "Black Leather Jacket",
     Location: "Closet",
-    Date_Listed: 03/13/2022,
+    Date_Listed: 3/13/2022,
     Quantity: 1,
     Sold: false
  },
@@ -31,7 +31,7 @@ const ItemData = [
     Catergory_Id: "Toys",
     Description: "Large Nerf Gun",
     Location: "Garage",
-    Date_Listed: 03/10/2022,
+    Date_Listed: 3/10/2022,
     Quantity: 2,
     Sold: true
  },

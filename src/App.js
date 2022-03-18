@@ -1,8 +1,8 @@
 import './App.css';
-import ToDoList from './ToDoList'
-import ToDoForm from './ToDoForm'
+import ItemList from './components/InventoryList'
+import ItemForm from './components/InventoryForm'
 import { useEffect } from 'react'
-import {fetchTodo} from './actions/actions'
+import {fetchitem} from './actions/Actions'
 import {connect} from 'react-redux'
 
 const mapStateToProps = (state) => ({
@@ -12,16 +12,16 @@ const mapStateToProps = (state) => ({
  
 function App(props) {
   useEffect(()=>{
-    props.fetchItem()
+    props.fetchitem()
 }, [])
   return (
     <div className="App">
-      <ToDoForm />
+      <ItemForm />
       {props.isLoading ? "INVENTORY IS LOADING" : "INVENTORY LOADED" }
-      <ToDoList />
+      <ItemList />
       {props.error !== "" ? props.error : ""}
     </div>
   );
 }
 
-export default connect(mapStateToProps, {fetchTodo})(App)
+export default connect(mapStateToProps, {fetchitem})(App)
