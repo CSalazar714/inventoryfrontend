@@ -4,18 +4,18 @@ import { removeItem, updateItem } from '../actions/Actions'
 
 function InventoryItem(props){
     const [Sold, setSold] = useState(props.Item.Sold)
-    async function handleUpdate(e){
-        e.preventDefault()
+    // async function handleUpdate(e){
+    //     e.preventDefault()
         
-       await props.updateItem(props.Item._id, {Sold: !Sold})
-        setSold(!Sold)
-    }
+    //    await props.updateItem(props.Item._id, {Sold: !Sold})
+    //     setSold(!Sold)
+    // }
 
-    function handleClick(e){
-        e.preventDefault()
-        props.removeItem(e.target.id,
-            props.Item)
-    }
+    // function handleClick(e){
+    //     e.preventDefault()
+    //     props.removeItem(e.target.id,
+    //         props.Item)
+    // }
     return(
         <>
         <h2>{props.Item.Item_Name}</h2>
