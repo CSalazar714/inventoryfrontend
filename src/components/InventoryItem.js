@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { connect } from 'react-redux'
 import { removeItem, updateItem } from '../actions/Actions'
 
-function InventoryItem(props){
-    const [Sold, setSold] = useState(props.Item.Sold)
+// function InventoryItem(props){
+//     const [Sold, setSold] = useState(props.Item.Sold)
     // async function handleUpdate(e){
     //     e.preventDefault()
         
