@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 function App(props) {
   useEffect(()=>{
     props.fetchitem()
-}, [])
+})
   return (
     <div className="App">
       <ItemForm />
