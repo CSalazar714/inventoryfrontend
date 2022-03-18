@@ -2,20 +2,20 @@ import { useState } from 'react'
 import { connect } from 'react-redux'
 import { removeItem, updateItem } from '../actions/Actions'
 
-// function InventoryItem(props){
-//     const [Sold, setSold] = useState(props.Item.Sold)
-    // async function handleUpdate(e){
-    //     e.preventDefault()
+function InventoryItem(props){
+    const [Sold, setSold] = useState(props.Item.Sold)
+    async function handleUpdate(e){
+        e.preventDefault()
         
-    //    await props.updateItem(props.Item._id, {Sold: !Sold})
-    //     setSold(!Sold)
-    // }
+       await props.updateItem(props.Item._id, {Sold: !Sold})
+        setSold(!Sold)
+    }
 
-    // function handleClick(e){
-    //     e.preventDefault()
-    //     props.removeItem(e.target.id,
-    //         props.Item)
-    // }
+    function handleClick(e){
+        e.preventDefault()
+        props.removeItem(e.target.id,
+            props.Item)
+    }
     return(
         <>
         <h2>{props.Item.Item_Name}</h2>
@@ -25,8 +25,8 @@ import { removeItem, updateItem } from '../actions/Actions'
         <p>{props.Item.Date_Listed}</p>
         <p>{props.Item.Quantity}</p>
         <p>{props.Item.Sold}</p>
-        {/* Need Button for Updating Item */}
-        {/* Need Button for removing Item */}
+        <h3 onClick={handleUpdate}>{Sold? "Sold" : "Still Available"}</h3>
+        <button id = {props.Item._id} onClick={handleClick}>DELETE</button>
         </>
     )
 }
