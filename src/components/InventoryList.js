@@ -8,12 +8,13 @@ const mapStateToProps = (state) => ({
 })
 
  function ItemList(props){
+     console.log(props)
     return(
         <>
         {props.ItemData.map(Item =>{
            return( 
             <>
-                <InventoryItem Item={Item} key={Item._id}/>
+                <InventoryItem Item = {Item} key={Item._id}/>
             </>
            )
         })}

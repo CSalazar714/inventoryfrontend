@@ -10,10 +10,10 @@ export const REMOVE_ITEM = "REMOVE_ITEM"
 export const fetchitem = () => (dispatch) => {
   dispatch({type: FETCH_ITEM_START})
   axios
-  .get("https://inventorybackend-carlos.herokuapp.com/")
+  .get("https://inventorybackend-carlos.herokuapp.com/inventory")
   .then(data => {
-        console.log(data.data.item_list)
-    dispatch({type: FETCH_ITEM_SUCCESS, payload: data.data.item_list})
+        console.log(data.data)
+    dispatch({type: FETCH_ITEM_SUCCESS, payload: data.data.inventory_list})
   })
   .catch(err => {
     dispatch({type: FETCH_ITEM_FAIL, payload: err.message})
