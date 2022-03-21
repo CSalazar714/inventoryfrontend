@@ -10,7 +10,7 @@ import { addItem } from '../actions/Actions'
       Location: "",
       Date_Listed: "",
       Quantity: 2,
-      Sold : false
+      Sold: false
     })
 
     //universal form handler
@@ -48,6 +48,7 @@ import { addItem } from '../actions/Actions'
             <br/>
             <button>Submit</button>
         </form>
+        
         </div>
     )
 }

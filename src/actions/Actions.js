@@ -24,7 +24,7 @@ export const addItem = (item) => (dispatch) =>{
     dispatch({type: FETCH_ITEM_START})
     axios
     .post("https://inventorybackend-carlos.herokuapp.com/", item)
-    .then(data => dispatch({type: ADD_ITEM, payload: data.data.item}))
+    .then(data => dispatch({type: ADD_ITEM, payload: data.data.inventory_list}))
     .catch(err => dispatch({type: FETCH_ITEM_FAIL, payload: err.message}))
     // 
   }
@@ -42,7 +42,7 @@ export const addItem = (item) => (dispatch) =>{
       dispatch({type: FETCH_ITEM_START})
       axios
       .put(`https://inventorybackend-carlos.herokuapp.com/${id}`, update)
-      .then(data => dispatch({type: UPDATE_ITEM, payload: data.data.item}))
+      .then(data => dispatch({type: UPDATE_ITEM, payload: data.data.inventory_list}))
       .catch(err => dispatch({type: FETCH_ITEM_FAIL, payload: err.message})
       )
     } 
