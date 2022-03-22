@@ -7,8 +7,11 @@ function NavBar(){
       return (
             <div className = 'navbar'>
                   <h1>This is the NavBar</h1>
+                  <Link to = '/Home'>Home</Link>
+                  <Link to = '/Inventory'>Inventory</Link>
+                  <Link to = '/AddItem'>AddItem</Link>
             </div>
 )
 }
 
-export default NavBar
+export default connect(null, {NavBar}) 
