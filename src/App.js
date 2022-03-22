@@ -34,5 +34,5 @@ function App(props) {
     </div>
   );
 }
-
+// export default App
 export default connect(mapStateToProps, {fetchitem})(App)

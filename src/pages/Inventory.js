@@ -1,5 +1,7 @@
 import InventoryList from "../components/InventoryList";
 import {useEffect} from 'react'
+import { connect } from "react-redux";
+import {fetchitem} from '../actions/Actions'
 
 function Inventory(props) {
       useEffect(()=>{
@@ -15,4 +17,4 @@ function Inventory(props) {
       );
     }
 
-export default Inventory;
+export default connect(null,{fetchitem})(Inventory );

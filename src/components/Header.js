@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -14,4 +14,4 @@ function NavBar(){
 )
 }
 
-export default connect(null, {NavBar}) 
+export default NavBar
