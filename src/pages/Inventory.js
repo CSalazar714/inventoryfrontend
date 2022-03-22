@@ -1,13 +1,18 @@
 import InventoryList from "../components/InventoryList";
+import {useEffect} from 'react'
 
-const Inventory = () => {
-  return (
-    <div>
-      <h1>Full Inventory</h1>
-
-      <InventoryList />
-    </div>
-  );
-};
+function Inventory(props) {
+      useEffect(()=>{
+        props.fetchitem()
+    }, [])
+      return (
+        <div className="InventoryListing">
+         
+          <InventoryList />
+      {props.isLoading ? "INVENTORY IS LOADING" : "INVENTORY LOADED" }
+      {props.error !== "" ? props.error : ""}
+        </div>
+      );
+    }
 
 export default Inventory;
