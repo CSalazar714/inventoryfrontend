@@ -24,11 +24,11 @@ function App(props) {
       {props.isLoading ? "INVENTORY IS LOADING" : "INVENTORY LOADED" }
       {props.error !== "" ? props.error : ""}
       {/* <Footer/> */}
-
+    
       <Switch>
             <Route exact path = '/' component = {Home}/>
             <Route exact path = '/Inventory' component = {Inventory}/>
-            <Route exact path = '/Categories' component = {AddItemForm}/>
+            <Route exact path = '/AddItemForm' component = {AddItemForm}/>
       </Switch>
     </div>
   );
