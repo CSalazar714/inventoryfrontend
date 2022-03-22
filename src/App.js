@@ -18,19 +18,18 @@ const mapStateToProps = (state) => ({
 function App(props) {
   useEffect(()=>{
     props.fetchitem()
-}, [])
+}, )
   return (
     <div className="App">
       <Header/>
-      {props.isLoading ? "INVENTORY IS LOADING" : "INVENTORY LOADED" }
-      {props.error !== "" ? props.error : ""}
-      <Footer/>
-    
       <Switch>
             <Route exact path = '/' component = {Home}/>
+            <Route  path = '/Home' component = {Home}/>
             <Route  path = '/Inventory' component = {Inventory}/>
             <Route  path = '/AddItemForm' component = {AddItemForm}/>
       </Switch>
+      
+        <Footer/>
     </div>
   );
 }

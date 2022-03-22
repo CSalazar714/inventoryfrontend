@@ -1,7 +1,8 @@
-import InventoryList from "../components/InventoryList";
+import ItemList from "../components/InventoryList";
 import {useEffect} from 'react'
 import { connect } from "react-redux";
 import {fetchitem} from '../actions/Actions'
+
 
 function Inventory(props) {
       useEffect(()=>{
@@ -10,7 +11,7 @@ function Inventory(props) {
       return (
         <div className="InventoryListing">
          
-          <InventoryList />
+          <ItemList />
       {props.isLoading ? "INVENTORY IS LOADING" : "INVENTORY LOADED" }
       {props.error !== "" ? props.error : ""}
         </div>

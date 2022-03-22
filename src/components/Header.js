@@ -8,8 +8,10 @@ function NavBar(){
             <div className = 'navbar'>
                   <h1>This is the NavBar</h1>
                   <Link to = '/Home'>Home</Link>
+                  <br/>
                   <Link to = '/Inventory'>Inventory</Link>
-                  <Link to = '/AddItem'>AddItem</Link>
+                  <br/>
+                  <Link to = '/AddItemForm'>AddItem</Link>
             </div>
 )
 }

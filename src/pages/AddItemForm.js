@@ -1,6 +1,6 @@
 import ItemForm from '../components/InventoryForm'
 
-const InventoryForm = ( ) => {
+const AddItem = ( ) => {
       return (
         <div>
           <h1>ItemForm</h1>
@@ -9,4 +9,4 @@ const InventoryForm = ( ) => {
       );
     };
     
-    export default InventoryForm;
+    export default AddItem;

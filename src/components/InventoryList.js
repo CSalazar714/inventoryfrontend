@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
-import InventoryItem from './InventoryItem'
+// import InventoryItem from './InventoryItem'
+import ItemData from '../Data'
 
 
 
@@ -14,7 +15,8 @@ const mapStateToProps = (state) => ({
         {props.ItemData.map(Item =>{
            return( 
             <>
-                <InventoryItem Item = {Item} key={Item}/>
+                <ItemData Item = {Item} key={Item}/>
+                {/* <ItemData/> */}
             </>
            )
         })}

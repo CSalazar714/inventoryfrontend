@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 
-function NavBar(){
+function BottomNavBar(){
       return (
             <div className = 'navbar'>
-                  <h1>This is the NavBar</h1>
+                  <h6>App Created by: Carlos Salazar</h6>
                   <Link to = '/Home'>Home</Link>
-                  <Link to = '/Inventory'>Inventory</Link>
-                  <Link to = '/AddItem'>AddItem</Link>
+                  
             </div>
 )
 }
 
-export default NavBar
+export default BottomNavBar
